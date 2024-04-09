@@ -28,4 +28,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn clean test -Dtest=testUsers --file DogSelector/pom.xml
+      run: mvn clean test -Dtest=DogRunner --file DogSelector/pom.xml
