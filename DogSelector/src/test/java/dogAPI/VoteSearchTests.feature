@@ -22,24 +22,6 @@ Feature: Run and Test Dog API
     * match breedFind.response.created_at == '#string'
     * match breedFind.response.value == '#number'
 
-  Scenario: Test positive cases to search single votes a second time
-    * def inputData = {'importID': '194823'}
-    * def breedFind = call read('classpath:helper/VotesSearch.feature') inputData
-    * match breedFind.responseStatus == 200
-    * match breedFind.response.image_id == '#string'
-    * match breedFind.response.sub_id == '#string'
-    * match breedFind.response.created_at == '#string'
-    * match breedFind.response.value == '#number'
-
-  Scenario: Test positive cases to search single votes a third time
-    * def inputData = {'importID': '194823'}
-    * def breedFind = call read('classpath:helper/VotesSearch.feature') inputData
-    * match breedFind.responseStatus == 200
-    * match breedFind.response.image_id == '#string'
-    * match breedFind.response.sub_id == '#string'
-    * match breedFind.response.created_at == '#string'
-    * match breedFind.response.value == '#number'
-
   Scenario Outline: Test negative cases to search votes
     * def inputData = {'importID': <id>}
     * def breedFind = call read('classpath:helper/VotesSearch.feature') inputData
