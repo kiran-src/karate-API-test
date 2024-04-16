@@ -6,6 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
+
 name: Java CI with Maven
 
 on:
@@ -27,11 +28,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn clean test -Dtest=DogRunner --file DogSelector/pom.xml
-
-
-- name: Clean Project before run
+    - name: Clean Project before run
       run: mvn clean --file DogSelector/pom.xml
  
     - name: Compile
